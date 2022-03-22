@@ -23,7 +23,7 @@ body {
 }
 
 #graph span {
-    margin: auto 1px 0 1px;
+    margin: auto 0 0 0;
     background-color: #a82e2e;
     justify-content: space-evenly;
     height: 100px;
@@ -34,12 +34,8 @@ body {
     width: 100%;
     border: 1px dashed #fff;
     border-style: none none dashed none;
-}
-
-p.average {
     color: #fff;
     text-align: right;
-    right: 12px;
 }
 
 .std {
@@ -47,10 +43,6 @@ p.average {
     width: 100%;
     border: 1px dashed #15ff00;
     border-style: none none dashed none;
-}
-
-p.std {
     color: #15ff00;
     text-align: right;
-    right: 80px;
 }

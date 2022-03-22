@@ -1,6 +1,7 @@
-let frequencyArray = new Array(251).fill(0);
-const repeatRandom = 100000;
-const randomRange = 251;
+const repeatRandom = 300000;
+const randomRange = 800;
+
+let frequencyArray = new Array(randomRange).fill(0);
 
 function randomGraph() {
     for (var i = 0; i < repeatRandom; i++) {
@@ -14,15 +15,12 @@ function randomGraph() {
 
     var averageLine = document.getElementsByClassName("average");
     averageLine[0].style.bottom = (repeatRandom/randomRange) + "px";
-    averageLine[1].style.bottom = (repeatRandom/randomRange) + "px";
 
     var std = getStandardDeviation(frequencyArray);
 
     var stdLine = document.getElementsByClassName("std");
     stdLine[0].style.bottom = (repeatRandom/randomRange + std) + "px";
-    stdLine[1].style.bottom = (repeatRandom/randomRange + std) + "px";
-    stdLine[2].style.bottom = (repeatRandom/randomRange - std) + "px";
-    stdLine[3].style.bottom = (repeatRandom/randomRange - std) + "px";
+    stdLine[1].style.bottom = (repeatRandom/randomRange - std) + "px";
 }
 
 function getStandardDeviation(array) {
