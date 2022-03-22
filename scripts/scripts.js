@@ -7,20 +7,30 @@ function randomGraph() {
     for (var i = 0; i < repeatRandom; i++) {
         frequencyArray[(Math.floor(Math.random() * randomRange))] += 1;
     }
+
+    var std = getStandardDeviation(frequencyArray);
+    var average = repeatRandom/randomRange;
+
     frequencyArray.forEach((frequency) => {
         var span = document.createElement('span');
         span.style.height = frequency + "px";
+        if (frequency > average + 2*std || frequency < average - 2*std) {
+            span.style.backgroundColor = "#e26a63";
+        }
+        else if (frequency > average + std || frequency < average - std) {
+            span.style.backgroundColor = "#fec04c";
+        }
         document.getElementById('graph').appendChild(span);
     });
 
     var averageLine = document.getElementsByClassName("average");
-    averageLine[0].style.bottom = (repeatRandom/randomRange) + "px";
-
-    var std = getStandardDeviation(frequencyArray);
+    averageLine[0].style.bottom = (average) + "px";
 
     var stdLine = document.getElementsByClassName("std");
-    stdLine[0].style.bottom = (repeatRandom/randomRange + std) + "px";
-    stdLine[1].style.bottom = (repeatRandom/randomRange - std) + "px";
+    stdLine[0].style.bottom = (average + std) + "px";
+    stdLine[1].style.bottom = (average - std) + "px";
+    stdLine[2].style.bottom = (average + 2*std) + "px";
+    stdLine[3].style.bottom = (average - 2*std) + "px";
 }
 
 function getStandardDeviation(array) {

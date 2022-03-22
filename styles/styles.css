@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Gadget, sans-serif;
+    font-size: 14px;
 }
 
 html {
@@ -8,41 +10,47 @@ html {
 }
 
 body {
-    margin: 0;
-    background-color: #333;
+    margin: 0px;
+    background-color: #272727;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 }
 
 #graph {
+    margin: 5px;
     display: grid;
     position: relative;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    height: 99vh;
-    border: 1px solid blue;
+    height: calc(100vh - 12px);
+    width: calc(100vw - 35px);
+    border: 1px solid #fff;
 }
 
-#graph span {
+span {
     margin: auto 0 0 0;
-    background-color: #a82e2e;
+    background-color: #4dab7c;
     justify-content: space-evenly;
     height: 100px;
 }
 
 .average {
     position: absolute;
-    width: 100%;
-    border: 1px dashed #fff;
-    border-style: none none dashed none;
+    width: 100vw;
+    border: 2px dashed #ffffff85;
+    border-style: none none dotted none;
     color: #fff;
     text-align: right;
+    font-weight: 900;
 }
 
 .std {
     position: absolute;
-    width: 100%;
-    border: 1px dashed #15ff00;
-    border-style: none none dashed none;
-    color: #15ff00;
+    width: 100vw;
+    border: 2px dashed #00ffff85;
+    border-style: none none dotted none;
+    color: #00ffff;
     text-align: right;
+    font-weight: 500;
 }
