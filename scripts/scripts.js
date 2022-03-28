@@ -1,5 +1,5 @@
-const repeatRandom = 300000;
-const randomRange = 800;
+const repeatRandom = 700000;
+const randomRange = 1800;
 
 let frequencyArray = new Array(randomRange).fill(0);
 
