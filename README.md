@@ -13,4 +13,4 @@ const randomRange = 1800;
 A linha branca horizontal demarca a frequência média.
 Enquanto as linhas azuis ciano horizontais são os desvios padrões.
 
-No histrograma as linhas verdes são frequências dentro do primeiro desvio padrão, as linha amarelas estão entre o segundo e primeiro desvio padrão e a vermelha acima de dois desvios padrões.
+No histrograma as linhas verdes são frequências dentro do primeiro desvio padrão, as linhas amarelas estão entre o segundo e primeiro desvio padrão e as linhas vermelhas acima de dois desvios padrões.
