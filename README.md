@@ -1,6 +1,6 @@
 ## Gerador de histograma para testar o random do JS
 
-Para alterar a quantidade de números gerados altere a constante repeatRandom, e para aumentar o range do random altere a constante randomRange.
+Para alterar a quantidade de números gerados altere a constante repeatRandom e para aumentar o range do random altere a constante randomRange.
 
 ```JS
 const repeatRandom = 700000;
